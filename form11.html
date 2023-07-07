@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resitration form</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="text-center mt-2"><h4 class="btn btn-primary">customer Details</h4></div>
+    <div class="container mt-3"><a href="" class="btn btn-primary">Basic</a><a href="" class="btn btn-primary ms-1">Advance</a>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card"><div class="p-3 bg-primary"></div>
+                    <div clas="card-body">
+                        <form id="form" action="/" method="post">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="customerno" >Customer No<span class="text-danger">*</span></label>
+                                        <input id="customerno" class="form-control" type="text">
+                                        <div id="feedback" class="valid-feedback"></div>
+                                        <div class="invalid-feedback">Customer No requried</div>
+                                    </div></div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="customerid">Customer Id</label>
+                                            <input id="customerid" class="form-control" type="text">
+                                            
+                                    
+                                        </div>
+
+                                    </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="title">Title<span class="text-danger">*</span></label>
+                                <input type="text" id="title" class="form-control">
+                                <div class="valid-feedback" id="feedback"></div>
+                                <div class="invalid-feedback">Title is empty</div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname">FirstName<span class="text-danger">*</span></label>
+                                <input type="firstname" id="firstname" class="form-control">
+                                <div class="valid-feedback" id="feedback"></div>
+                                <div class="invalid-feedback">Title is empty</div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="agegroup">Age Group<span class="text-danger">*</span></label>
+                                <input type="text" id="agegroup" class="form-control">
+                                <div class="valid-feedback" id="feedback"></div>
+                                <div class="invalid-feedback">Age group is Required</div>
+
+                            </div></div><div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <select id="state" class="form-control">
+                                        <option>TamilNadu</option>
+                                        <option>Karnadaka</option>
+                                        <option>Kerla</option>
+                                        <option>UP</option>
+                                    </select>
+                                    
+                                </div>
+
+
+
+
+
+
+                            </div>
+                           
+                        </div>
+                        <div class="form-group">
+                        <label for="customertype">Customer Type<span class="text-danger">*</span></label>
+                        <input type="text" id="customertype" class="form-control">
+                        <div id="feedback" class="valid-feedback"></div>
+                        <div class="invalid-feedback" >Customer Type is Required</div>
+                        </div>
+                        <div class="form-group mt-3 text-center">
+                        <button class="btn btn-danger" type="reset">Clear</button>
+                        <button class="btn btn-primary" type="text">Basic</button>
+                    <button class="btn btn-primary" type="text">Advance</button>
+                    <button class="btn btn-success" type="submit">Next</button>
+                </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script>
+    const form=document.getElementById('form');
+    form.addEventListener('submit',function(event){
+
+   event.preventDefault();
+    const customerno=document.getElementById('customerno');
+    const customerid=document.getElementById('customerid');
+    const title=document.getElementById('title');
+    const firstname=document.getElementById('firstname');
+    const state=document.getElementById('state');
+    const agegroup=document.getElementById('agegroup');
+    const customertype=document.getElementById('customertype');
+    const feedback=document.getElementById('feedback');
+
+if(customerno.value===""){
+customerno.classList.add("is-invalid");
+feedback.style.display="block";
+
+}else{
+    customerno.classList.remove("is-invalid");
+    customerno.classList.add("is-valid");
+    feedback.style.display="block";}
+    if(title.value===""){
+        title.classList.add("is-invalid");
+        feedback.style.display="block";
+    }else{
+        title.classList.remove("is-invalid");
+        feedback.style.display="block";
+    }
+    if(agegroup.value===""){
+        agegroup.classList.add("is-invalid");
+        feedback.style.display="block";
+    }else{
+        agegroup.classList.remove("is-invalid");
+        agegroup.classList.add("is-valid");
+        feedback.style.display="block";
+    }
+    if(customertype.value===""){
+        customertype.classList.add("is-invalid");
+        feedback.style.display="block";
+    }else{
+        customertype.classList.remove("is-invalid");
+        customertype.classList.add("is-valid");
+        feedback.style.display="block";
+    }
+    if(firstname.value===""){
+        firstname.classList.add("is-invalid");
+        feedback.style.display="block";
+    }else{
+        firstname.classList.remove("is-invalid");
+        firstname.classList.add("is-valid");
+        feedback.style.display="block";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

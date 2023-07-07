@@ -1,0 +1,19 @@
+             
+                                  Customer Validation With Bootstrap
+
+
+  1.using class from bootstrap : container,row,card,card-body,form-group and form-control.
+
+
+  2.in javascript : using addeventListener for function to verifying form events.
+
+
+
+
+
+
+
+
+
+
+          --> HTML,BOOTSRAP and JAVASCRIPT
